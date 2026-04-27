@@ -43,7 +43,7 @@ export const ScrollReveal = memo(function ScrollReveal({
         scale: 1,
         filter: "blur(0px)",
       }}
-      viewport={{ once, amount: SCROLL_REVEAL_CONFIG.viewport.amount }}
+      viewport={{ once, amount: 0.05 }}
       transition={{
         duration,
         delay,
