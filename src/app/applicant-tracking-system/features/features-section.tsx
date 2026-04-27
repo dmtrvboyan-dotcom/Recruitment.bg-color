@@ -5,13 +5,12 @@ import Image from "next/image"
 import { featuresData } from "./data"
 
 const featureImages: Record<string, string> = {
-  "Visual Pipeline": "/smartr/2.jpg",
-  "Automated Workflows": "/smartr/3.jpg",
-  "Real-time Analytics": "/smartr/4.jpg",
-  "Team Collaboration": "/smartr/5.jpg",
-  "Email Integration": "/smartr/6.jpg",
-  "Bulgarian Support": "/smartr/2.jpg",
-  "Resume Parsing": "/smartr/1.jpg",
+  "Automated Workflows": "/smartr/workflow.png",
+  "Real-time Analytics": "/smartr/analytics.png",
+  "Team Collaboration": "/smartr/collab.png",
+  "Email Integration": "/smartr/email.png",
+  "Bulgarian Support": "/smartr/support.png",
+  "Resume Parsing": "/smartr/resume.png",
 }
 
 export function FeaturesSection() {

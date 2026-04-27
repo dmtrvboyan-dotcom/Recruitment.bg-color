@@ -4,7 +4,7 @@ import { securityData } from "./data";
 
 export function SecuritySection() {
   return (
-    <section className="py-20 md:py-32 px-6 border-y border-slate-200">
+    <section className="py-20 md:py-32 px-6  bg-gradient-to-b from-white to-[#ededed]">
       <div className="max-w-6xl mx-auto">
 
         {/* Header — same pattern as BenefitsSection & IntegrationsSection */}

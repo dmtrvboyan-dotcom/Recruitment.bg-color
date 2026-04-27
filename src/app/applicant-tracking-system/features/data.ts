@@ -23,12 +23,7 @@ export const featuresData = {
   title: "Everything You Need to Hire Smarter",
   subtitle: "Comprehensive tools designed around how real hiring actually works",
   items: [
-    {
-      icon: Kanban,
-      title: "Visual Pipeline",
-      description:
-        "Drag-and-drop kanban boards give you complete visibility into your hiring funnel with Smart.R tools. Track every candidate from application to offer.",
-    },
+
     {
       icon: Workflow,
       title: "Automated Workflows",
@@ -40,6 +35,12 @@ export const featuresData = {
       title: "Real-time Analytics",
       description:
         "Comprehensive dashboards show you time-to-hire, source effectiveness, and pipeline health at a glance.",
+    },
+    {
+      icon: FileSearch,
+      title: "Resume Parsing",
+      description:
+        "Automatically extract and structure data from resumes using Smart.R parsing. Search across all candidates with powerful filters.",
     },
     {
       icon: Users,
@@ -58,12 +59,6 @@ export const featuresData = {
       title: "Bulgarian Support",
       description:
         "We’re just a call or email away with Smart.R support. Get fast, reliable assistance in Bulgarian—whether it’s onboarding, troubleshooting, or optimizing your hiring workflows.",
-    },
-    {
-      icon: FileSearch,
-      title: "Resume Parsing",
-      description:
-        "Automatically extract and structure data from resumes using Smart.R parsing. Search across all candidates with powerful filters.",
     },
   ] as Feature[],
 }

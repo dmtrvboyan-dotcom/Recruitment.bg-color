@@ -7,7 +7,7 @@ export function IntegrationsSection() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <section className="py-24 md:py-36 px-6 relative overflow-hidden">
+    <section className="py-24 md:py-36 px-6 relative overflow-hidden  bg-gradient-to-b from-[#ededed] to-white pt-40">
 
 
       {/* Soft radial glow at center */}
@@ -19,7 +19,7 @@ export function IntegrationsSection() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 ">
         {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-flex items-center gap-2 text-md font-bold text-[#085689] uppercase tracking-[0.2em] mb-5">

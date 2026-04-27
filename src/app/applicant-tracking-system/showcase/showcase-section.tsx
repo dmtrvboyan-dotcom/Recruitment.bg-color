@@ -37,7 +37,7 @@ export function ShowcaseSection() {
   }
 
   return (
-    <section className="w-full">
+    <section className="w-full  bg-gradient-to-b from-white to-[#ededed] pt-25 pb-20">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <span className="inline-flex items-center gap-2 text-md font-bold text-[#085689] uppercase tracking-[0.2em] mb-5">
@@ -98,7 +98,7 @@ export function ShowcaseSection() {
                       onClick={() => handleItemClick(i)}
                       aria-expanded={isActive}
                       className={cn(
-                        "flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/85 backdrop-blur-md shadow-sm hover:bg-white transition-all duration-300 ease-out",
+                        "flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/85 backdrop-blur-md hover:bg-white transition-all duration-300 ease-out",
                         isActive
                           ? "opacity-0 scale-95 max-h-0 py-0 pointer-events-none overflow-hidden"
                           : "opacity-100 scale-100 max-h-12",
@@ -122,7 +122,7 @@ export function ShowcaseSection() {
                           : "opacity-0 max-h-0 scale-95 pointer-events-none",
                       )}
                     >
-                      <div className="bg-white/50 backdrop-blur-md rounded-2xl p-4 shadow-md">
+                      <div className="bg-white/50 backdrop-blur-md rounded-2xl p-4">
                         <p className="text-sm leading-relaxed text-gray-800">
                           <strong className="font-semibold text-gray-900">{item.label}.</strong>{" "}
                           {item.content}

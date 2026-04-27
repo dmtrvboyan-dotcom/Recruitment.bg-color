@@ -15,7 +15,7 @@ export function CTASection() {
           {ctaData.description}
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-4 pb-20">
           <a
             href={ctaData.primaryCta.href}
             target="_blank"
@@ -26,14 +26,14 @@ export function CTASection() {
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
           </a>
-          <Link href={ctaData.secondaryCta.href}>
+          {/* <Link href={ctaData.secondaryCta.href}>
             <Button
               variant="outline"
               className="bg-transparent text-white hover:bg-white/20 rounded-lg px-8 py-6 text-base border-white/30"
             >
               {ctaData.secondaryCta.text}
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>

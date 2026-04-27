@@ -8,10 +8,10 @@ export function BenefitsSection() {
     const [active, setActive] = useState(0);
 
     const bgImages = [
-        "/smartr/1.jpg",
-        "/smartr/2.jpg",
-        "/smartr/3.jpg",
-        "/smartr/4.jpg",
+        "/smartr/time.png",
+        "/smartr/reduce.png",
+        "/smartr/experience.png",
+        "/smartr/gain.png",
     ];
 
     const handleClick = (index: number) => {
@@ -20,7 +20,7 @@ export function BenefitsSection() {
     };
 
     return (
-        <section className="py-20 md:py-32 px-6 bg-transparent overflow-hidden">
+        <section className="py-20 md:py-32 px-6 bg-gradient-to-b from-[#ededed] to-white overflow-hidden">
             <div className="max-w-6xl mx-auto">
 
                 <div className="text-center mb-6">

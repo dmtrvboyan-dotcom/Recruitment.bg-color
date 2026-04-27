@@ -3,8 +3,8 @@ export const ctaData = {
   description:
     "Join thousands of companies using Smart.R to hire faster and smarter. Start your free trial today — no credit card required.",
   primaryCta: {
-    text: "Start Free Trial",
-    href: "https://smartr-olive.vercel.app/",
+    text: "Book a demo",
+    href: "/#contact",
   },
   secondaryCta: {
     text: "Book a Demo",

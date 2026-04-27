@@ -3,7 +3,7 @@ import { faqData } from "./data"
 
 export function FAQSection() {
   return (
-    <section className="py-20 md:py-32 px-6">
+    <section className="py-20 md:py-32 px-6 bg-gradient-to-b from-[#ededed] to-white">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <span className="text-md font-medium text-[#085689] uppercase tracking-wider mb-4 block">
