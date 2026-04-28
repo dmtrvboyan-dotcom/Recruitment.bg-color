@@ -16,7 +16,7 @@ export const showcaseData = {
       id: 2,
       label: "Hiring board",
       content:
-        "Streamline recruitment with a smart hiring board—track candidates, manage stages, and collaborate with your team effortlessly.",
+        "Streamline recruitment with a smart.r hiring board—track candidates, manage stages, and collaborate with your team effortlessly.",
       image: "/smartr/2.png",
     },
     {

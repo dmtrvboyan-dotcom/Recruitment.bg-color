@@ -98,7 +98,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     image: "/members/yulia.jpg",
     linkedin: "https://linkedin.com/in/yulia-rapinchuk",
     quote:
-      "I am respectful, kind and people-oriented. Until I am not.",
+      "I'm respectful, kind, and people-first… until I have a reason not to be.",
   },
   {
     name: "Boyan Dimitrov",

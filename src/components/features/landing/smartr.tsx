@@ -89,7 +89,7 @@ export const SmartRSection = memo(function SmartRSection() {
 
               <div className="flex items-center justify-center sm:justify-start gap-2 text-center sm:text-left">
                 <RiCheckLine className="text-[#085689]" size={16} />
-                <span>Smart AI insights</span>
+                <span>Smart.R AI insights</span>
               </div>
             </div>
 
@@ -102,13 +102,13 @@ export const SmartRSection = memo(function SmartRSection() {
               </Button>
             </Link>
 
-            <Button
+            {/* <Button
               onClick={handleNavigate}
               variant="outline"
               className="bg-transparent text-black hover:bg-[#78B6D9] hover:text-white rounded-lg px-8 py-6 text-base border-slate-300 cursor-pointer"
             >
               Book a demo
-            </Button>
+            </Button> */}
           </div>
         </div>
 

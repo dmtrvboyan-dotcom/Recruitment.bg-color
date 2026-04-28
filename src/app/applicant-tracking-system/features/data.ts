@@ -20,7 +20,7 @@ export interface Feature {
 
 export const featuresData = {
   tagline: "POWERFUL FEATURES",
-  title: "Everything You Need to Hire Smarter",
+  title: "Everything You Need to Hire Smart.r",
   subtitle: "Comprehensive tools designed around how real hiring actually works",
   items: [
 
