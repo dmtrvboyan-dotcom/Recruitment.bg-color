@@ -160,7 +160,7 @@ const CategoryModal = memo(function CategoryModal({ category }: { category: Tech
           <p className="text-2xl sm:text-3xl font-bold text-[#085689]">{category.stat2Value}</p>
           <p className="text-xs sm:text-sm text-slate-500 mt-0.5">{category.stat2Label}</p>
         </div>
-      </div>   
+      </div>
     </div>
   )
 })
@@ -211,7 +211,7 @@ export function SpecializedRecruitment() {
         <div className="flex justify-center mt-12">
           <Button
             onClick={() => scrollToSection("#contact")}
-            className="bg-[#085689] hover:bg-[#78B6D9] text-white hover:text-black px-10 py-6 text-sm font-semibold rounded-xl shadow-md hover:shadow-lg transition-all active:scale-[0.98] cursor-pointer"
+            className="bg-[#085689] hover:bg-[#78B6D9] text-white hover:text-black px-10 py-6 sm:text-[18px] text-sm font-semibold rounded-xl shadow-md hover:shadow-lg transition-all active:scale-[0.98] cursor-pointer"
           >
             Looking for a specific role? Let's talk
           </Button>

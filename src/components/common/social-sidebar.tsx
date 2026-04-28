@@ -46,7 +46,7 @@ export function SocialSidebar() {
 
         <span
           className="text-black text-md font-bold tracking-[3px] uppercase"
-          style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+          style={{ writingMode: "sideways-lr", textOrientation: "mixed" }}
         >
           Recruitment agency
         </span>

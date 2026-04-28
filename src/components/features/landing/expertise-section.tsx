@@ -141,7 +141,7 @@ export function ExpertiseSection() {
                 </div>
 
                 <div className="text-center mt-12">
-                    <p className="text-slate-500 text-sm">
+                    <p className="text-slate-500 sm:text-xl text-sm">
                         Not sure where to start?{" "}
                         <a href="#contact" className="text-[#085689] hover:underline font-medium">
                             Contact us
