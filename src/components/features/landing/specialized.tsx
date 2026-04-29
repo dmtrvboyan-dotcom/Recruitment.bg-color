@@ -21,6 +21,7 @@ import {
   PenTool,
   Smartphone,
   Crown,
+  Eye,
   X,
 } from "lucide-react"
 import { TECHNOLOGY_PILLS, TECH_CATEGORIES, type TechCategory } from "@/lib/constants/specialized"
@@ -63,8 +64,22 @@ const CategoryCard = memo(function CategoryCard({
   return (
     <div
       onClick={onClick}
-      className="group border border-slate-100 rounded-2xl p-5 bg-[#f5f5f5] hover:border-[#085689]/20 hover:shadow-lg transition-all duration-300 cursor-pointer"
-    >
+      className="relative group border border-slate-100 rounded-2xl p-5 bg-[#f5f5f5] hover:border-[#085689]/20 hover:shadow-lg transition-all duration-300 cursor-pointer"    >
+
+      {/* Eye Icon */}
+      <div className="absolute top-3 right-3">
+        <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#78B6D9]/80 backdrop-blur-sm border border-slate-200
+    opacity-100 sm:opacity-0 sm:group-hover:opacity-100
+    scale-100 sm:scale-90 sm:group-hover:scale-100
+    transition-all duration-300 ease-out">
+
+          {/* Glow (mobile subtle animation) */}
+          <span className="absolute inset-0 rounded-full bg-[#78B6D9]/30 blur-md opacity-60 animate-pulse sm:hidden" />
+
+          <Eye className="w-4 h-4 text-white" />
+        </div>
+      </div>
+
       {/* Icon + category label */}
       <div className="flex items-center gap-2 mb-3 ">
         <div className="w-8 h-8 rounded-2xl bg-[#78B6D9]/10 flex items-center justify-center">

@@ -55,4 +55,9 @@ export const showcaseData = {
       image: "/smartr/7.png",
     },
   ],
+
+   ctaButton: {
+    text: "Book a Demo",
+    href: "/#contact",
+  },
 }

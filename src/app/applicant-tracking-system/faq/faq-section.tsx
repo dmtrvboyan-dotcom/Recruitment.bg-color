@@ -37,7 +37,7 @@ export function FAQSection() {
                 {/* Header */}
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full flex items-center justify-between p-6 text-left"
+                  className="w-full flex items-center justify-between p-6 text-left cursor-pointer"
                 >
                   <h3 className="font-semibold text-black pr-4">
                     {item.question}

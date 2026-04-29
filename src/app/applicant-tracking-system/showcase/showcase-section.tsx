@@ -1,9 +1,12 @@
 "use client"
+import Link from "next/link"
 import { useState } from "react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { ChevronLeft, ChevronRight, Plus, X } from "lucide-react"
 import { showcaseData } from "./data";
+import { Button } from "@/components/ui/button"
+
 
 const items = showcaseData.items
 
@@ -52,6 +55,8 @@ export function ShowcaseSection() {
             {showcaseData.description}
           </p>
         </div>
+
+
         {/* Desktop Layout — inline pill expansion (pushes others down) */}
         <div className="hidden md:block relative w-full overflow-hidden rounded-3xl aspect-16/9 bg-[#4e4f5e0c]">
           {/* Background Images */}
@@ -92,13 +97,13 @@ export function ShowcaseSection() {
               {items.map((item, i) => {
                 const isActive = activeIdx === i
                 return (
-                  <div key={item.id} className="relative">
+                  <div key={item.id} className="relative ">
                     {/* Collapsed pill */}
                     <button
                       onClick={() => handleItemClick(i)}
                       aria-expanded={isActive}
                       className={cn(
-                        "flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/85 backdrop-blur-md hover:bg-white transition-all duration-300 ease-out",
+                        "flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/85 backdrop-blur-md hover:bg-white transition-all duration-300 ease-out cursor-pointer",
                         isActive
                           ? "opacity-0 scale-95 max-h-0 py-0 pointer-events-none overflow-hidden"
                           : "opacity-100 scale-100 max-h-12",
@@ -237,8 +242,22 @@ export function ShowcaseSection() {
                 </button>
               ))}
             </div>
+
+
           </div>
         </div>
+
+        <div className="flex justify-center mt-20 px-6 -mb-10">
+          <Link href={showcaseData.ctaButton.href}>
+            <Button
+              variant="outline"
+              className="bg-[#085689] text-white hover:bg-[#78B6D9] hover:border-slate-400 rounded-xl px-10 py-6 text-base font-medium transition-all duration-300 cursor-pointer"
+            >
+              {showcaseData.ctaButton.text}
+            </Button>
+          </Link>
+        </div>
+
       </div>
     </section>
   )

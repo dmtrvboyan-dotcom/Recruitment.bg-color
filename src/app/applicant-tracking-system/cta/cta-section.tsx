@@ -21,7 +21,7 @@ export function CTASection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="bg-white text-[#085689] hover:bg-slate-100 rounded-lg px-8 py-6 text-base group">
+            <Button className="bg-white text-[#085689] hover:bg-slate-100 rounded-lg px-8 py-6 text-base group cursor-pointer">
               {ctaData.primaryCta.text}
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
