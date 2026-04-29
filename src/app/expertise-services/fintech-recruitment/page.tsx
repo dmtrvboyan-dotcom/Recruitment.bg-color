@@ -10,6 +10,9 @@ import {
   WHAT_WE_HIRE_HEADER,
   WHAT_WE_HIRE,
   CTA_DATA,
+  FULL_TALENT_HEADER,
+  FULL_TALENT_SUBTITLE,
+  ROLE_CATEGORIES
 } from "./data"
 
 export const metadata: Metadata = {
@@ -42,6 +45,46 @@ export default function FintechRecruitmentPage() {
         </div>
       </section>
 
+         {/* What We Hire Section */}
+      <ScrollReveal>
+        <section className="px-4 py-20 md:px-8 md:py-28">
+          <div className="mx-auto max-w-6xl">
+            <div className="text-center mb-14">
+              <p className="text-sm font-medium text-[#085689] uppercase tracking-widest mb-3">
+                {WHAT_WE_HIRE_HEADER.tagline}
+              </p>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-4">
+                {WHAT_WE_HIRE_HEADER.title}
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {WHAT_WE_HIRE.map((item, index) => {
+                const Icon = item.icon
+                return (
+                  <div
+                    key={index}
+                    className="group p-8 bg-[#f5f5f5] rounded-3xl border border-slate-100 hover:border-[#78B6D9]/30 hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="mb-6">
+                      <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#085689]/5 text-[#085689] group-hover:bg-[#78B6D9] group-hover:text-white transition-colors">
+                        <Icon className="w-7 h-7" />
+                      </div>
+                    </div>
+                    <h3 className="font-semibold text-xl text-black mb-3 leading-tight group-hover:text-[#085689] transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-slate-600 text-[15px] leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      </ScrollReveal>
+
       {/* Bulgaria Strengths Section */}
       <ScrollReveal>
         <section className="px-4 py-20 md:px-8 md:py-28 bg-[#f5f5f5]/50">
@@ -72,45 +115,61 @@ export default function FintechRecruitmentPage() {
         </section>
       </ScrollReveal>
 
-      {/* What We Hire Section */}
-      <ScrollReveal>
-        <section className="px-4 py-20 md:px-8 md:py-28">
-          <div className="mx-auto max-w-6xl">
-            <div className="text-center mb-14">
-              <p className="text-sm font-medium text-[#085689] uppercase tracking-widest mb-3">
-                {WHAT_WE_HIRE_HEADER.tagline}
-              </p>
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-4">
-                {WHAT_WE_HIRE_HEADER.title}
-              </h2>
-            </div>
+   
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {WHAT_WE_HIRE.map((item, index) => {
-                const Icon = item.icon
-                return (
+
+
+{/* Full Talent Spectrum Section */}
+<ScrollReveal>
+  <section className="px-4 py-20 md:px-8 md:py-28">
+    <div className="mx-auto max-w-6xl">
+      <div className="text-center mb-14">
+        <p className="text-sm font-medium text-[#085689] uppercase tracking-widest mb-3">
+          {FULL_TALENT_HEADER.tagline}
+        </p>
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black mb-4">
+          {FULL_TALENT_HEADER.title}
+        </h2>
+        <p className="text-base text-slate-500 max-w-xl mx-auto">
+          {FULL_TALENT_SUBTITLE}
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {ROLE_CATEGORIES.map((cat, i) => {
+          const Icon = cat.icon
+          const isLast = i === ROLE_CATEGORIES.length - 1
+          return (
+            <div
+              key={i}
+              className={`group rounded-2xl border border-slate-100 bg-white p-6 hover:border-[#78B6D9]/40 hover:shadow-md transition-all duration-300${isLast ? " sm:col-span-2 lg:col-span-1 lg:col-start-2" : ""}`}
+            >
+              <div className="flex items-center gap-3 mb-5">
+                <div className={`w-9 h-9 rounded-xl flex items-center justify-center ${cat.iconBg} ${cat.color} flex-shrink-0`}>
+                  <Icon className="w-[18px] h-[18px]" />
+                </div>
+                <span className="font-semibold text-[15px] text-black group-hover:text-[#085689] transition-colors">
+                  {cat.tagline}
+                </span>
+              </div>
+              <div className="flex flex-col gap-2">
+                {cat.roles.map((role, j) => (
                   <div
-                    key={index}
-                    className="group p-8 bg-[#f5f5f5] rounded-3xl border border-slate-100 hover:border-[#78B6D9]/30 hover:shadow-xl transition-all duration-300"
+                    key={j}
+                    className="text-[13px] text-slate-600 bg-slate-50 rounded-lg px-3 py-2 leading-snug"
                   >
-                    <div className="mb-6">
-                      <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-[#085689]/5 text-[#085689] group-hover:bg-[#78B6D9] group-hover:text-white transition-colors">
-                        <Icon className="w-7 h-7" />
-                      </div>
-                    </div>
-                    <h3 className="font-semibold text-xl text-black mb-3 leading-tight group-hover:text-[#085689] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-slate-600 text-[15px] leading-relaxed">
-                      {item.description}
-                    </p>
+                    {role.title}
                   </div>
-                )
-              })}
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      </ScrollReveal>
+          )
+        })}
+      </div>
+    </div>
+  </section>
+</ScrollReveal>
+
 
       {/* CTA Section */}
       <ScrollReveal>
