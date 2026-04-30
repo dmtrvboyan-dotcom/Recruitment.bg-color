@@ -53,7 +53,7 @@ export const JobModal = memo(function JobModal({ job, onClose }: JobModalProps) 
         }}
       >
         {/* Header */}
-        <div className="bg-[#085689] p-6 text-white relative shrink-0">
+        <div className="bg-[var(--color-text-secondary)] p-6 text-white relative shrink-0">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 w-9 h-9 rounded-full flex items-center justify-center transition-colors"
@@ -95,45 +95,45 @@ export const JobModal = memo(function JobModal({ job, onClose }: JobModalProps) 
 
         {/* Body */}
         <div className="flex-1 overflow-y-auto p-5 space-y-4" style={{ WebkitOverflowScrolling: "touch" }}>
-          <div className="bg-slate-50 p-4">
-            <p className="text-xs font-semibold text-[#085689] uppercase tracking-widest mb-2">
+          <div className="bg-[var(--color-bg-secondary)] p-4 rounded-2xl">
+            <p className="text-xs font-semibold text-[var(--color-accent-primary)] uppercase tracking-widest mb-2">
               Position Overview
             </p>
-            <p className="text-sm text-slate-700 leading-relaxed">{details.overview}</p>
+            <p className="text-sm text-[var(--color-text-primary)] leading-relaxed">{details.overview}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-slate-50 rounded-2xl p-4">
-              <p className="text-xs font-semibold text-[#085689] uppercase tracking-widest mb-1">Responsibilities</p>
-              <BulletList items={details.responsibilities} color="#78B6D9" />
+            <div className="bg-[var(--color-bg-secondary)] rounded-2xl p-4">
+              <p className="text-xs font-semibold text-[var(--color-accent-primary)] uppercase tracking-widest mb-1">Responsibilities</p>
+              <BulletList items={details.responsibilities} color="#FF7F7F" />
             </div>
-            <div className="bg-slate-50 rounded-2xl p-4">
-              <p className="text-xs font-semibold text-[#085689] uppercase tracking-widest mb-1">Requirements</p>
-              <BulletList items={details.requirements} color="#78B6D9" />
+            <div className="bg-[var(--color-bg-secondary)] rounded-2xl p-4">
+              <p className="text-xs font-semibold text-[var(--color-accent-primary)] uppercase tracking-widest mb-1">Requirements</p>
+              <BulletList items={details.requirements} color="#FF7F7F" />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-slate-50 rounded-2xl p-4">
+            <div className="bg-[var(--color-bg-secondary)] rounded-2xl p-4">
               <p className="text-xs font-semibold text-[#10b981] uppercase tracking-widest mb-1">Nice to Have</p>
               <BulletList items={details.niceToHave} color="#10b981" />
             </div>
-            <div className="bg-slate-50 rounded-2xl p-4">
+            <div className="bg-[var(--color-bg-secondary)] rounded-2xl p-4">
               <p className="text-xs font-semibold text-[#f59e0b] uppercase tracking-widest mb-1">What We Offer</p>
               <BulletList items={details.offers} color="#f59e0b" />
             </div>
           </div>
 
-          <p className="text-md text-slate-600 leading-relaxed text-center max-w-5xl mx-auto mt-5 mb-5">
+          <p className="text-md text-[var(--color-muted-foreground)] leading-relaxed text-center max-w-5xl mx-auto mt-5 mb-5">
             By applying for this position, you agree that your personal data will be processed according to our privacy policy.
           </p>
         </div>
 
         {/* Footer */}
-        <div className="shrink-0 px-5 py-4 border-t border-slate-100">
+        <div className="shrink-0 px-5 py-4 border-t border-[var(--color-border)]">
           <button
             onClick={() => console.log(`Applying for: ${job.title}`)}
-            className="w-full bg-[#085689] hover:bg-[#0a6a9e] text-white py-4 rounded-2xl font-semibold text-base transition-all active:scale-[0.98]"
+            className="w-full bg-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)]/90 text-white py-4 rounded-2xl font-semibold text-base transition-all active:scale-[0.98] shadow-md"
           >
             Apply for this role
           </button>

@@ -49,7 +49,7 @@ export const JobFilters = memo(function JobFilters(props: JobFiltersProps) {
       {/* Mobile toggle */}
       <button
         onClick={() => setShowFilters(!showFilters)}
-        className="lg:hidden flex items-center gap-2 mx-auto bg-[#085689] text-white px-6 py-3 rounded-2xl mb-6"
+        className="lg:hidden flex items-center gap-2 mx-auto bg-[var(--color-accent-primary)] text-white px-6 py-3 rounded-2xl mb-6 shadow-md"
       >
         <Filter className="w-5 h-5" />
         Filters
@@ -57,7 +57,7 @@ export const JobFilters = memo(function JobFilters(props: JobFiltersProps) {
       </button>
 
       <div className={`lg:w-80 lg:shrink-0 transition-all ${showFilters ? "block" : "hidden"} lg:block`}>
-        <div className="bg-[#f5f5f5] border border-slate-200 rounded-3xl p-6 lg:sticky lg:top-8 space-y-6">
+        <div className="bg-white border border-[var(--color-border)] rounded-3xl p-6 lg:sticky lg:top-8 space-y-6">
 
           <FilterSection title="Technology" isOpen={openSections.technology} onToggle={() => toggleSection("technology")}>
             <div className="grid grid-cols-2 gap-2 pt-1">
@@ -67,8 +67,8 @@ export const JobFilters = memo(function JobFilters(props: JobFiltersProps) {
                   onClick={() => setSelectedTech(tech.value)}
                   className={`py-3 px-4 rounded-2xl text-sm font-medium transition-all ${
                     selectedTech === tech.value
-                      ? "bg-[#78B6D9] text-white"
-                      : "bg-slate-100 hover:bg-slate-200 text-slate-700"
+                      ? "bg-[var(--color-accent-primary)] text-white"
+                      : "bg-[var(--color-bg-secondary)] hover:bg-[var(--color-accent-primary)]/10 text-[var(--color-text-primary)]"
                   }`}
                 >
                   {tech.label}
@@ -85,9 +85,9 @@ export const JobFilters = memo(function JobFilters(props: JobFiltersProps) {
                     type="checkbox"
                     checked={selectedSeniorities.includes(s)}
                     onChange={() => setSelectedSeniorities((prev) => toggleArrayItem(prev, s))}
-                    className="w-5 h-5 accent-[#78B6D9] rounded"
+                    className="w-5 h-5 accent-[#FF7F7F] rounded"
                   />
-                  <span className="text-slate-700">{s}</span>
+                  <span className="text-[var(--color-text-primary)]">{s}</span>
                 </label>
               ))}
             </div>
@@ -101,9 +101,9 @@ export const JobFilters = memo(function JobFilters(props: JobFiltersProps) {
                     type="checkbox"
                     checked={selectedLocations.includes(loc)}
                     onChange={() => setSelectedLocations((prev) => toggleArrayItem(prev, loc))}
-                    className="w-5 h-5 accent-[#78B6D9] rounded"
+                    className="w-5 h-5 accent-[#FF7F7F] rounded"
                   />
-                  <span className="text-slate-700">{loc}</span>
+                  <span className="text-[var(--color-text-primary)]">{loc}</span>
                 </label>
               ))}
             </div>
@@ -117,9 +117,9 @@ export const JobFilters = memo(function JobFilters(props: JobFiltersProps) {
                     type="checkbox"
                     checked={selectedContracts.includes(c.value)}
                     onChange={() => setSelectedContracts((prev) => toggleArrayItem(prev, c.value))}
-                    className="w-5 h-5 accent-[#78B6D9] rounded"
+                    className="w-5 h-5 accent-[#FF7F7F] rounded"
                   />
-                  <span className="text-slate-700">{c.label}</span>
+                  <span className="text-[var(--color-text-primary)]">{c.label}</span>
                 </label>
               ))}
             </div>
@@ -133,8 +133,8 @@ export const JobFilters = memo(function JobFilters(props: JobFiltersProps) {
                   onClick={() => setSelectedType(type)}
                   className={`w-full text-left px-4 py-3 rounded-2xl transition-all ${
                     selectedType === type
-                      ? "bg-[#78B6D9] text-white"
-                      : "hover:bg-slate-100 text-slate-700"
+                      ? "bg-[var(--color-accent-primary)] text-white"
+                      : "hover:bg-[var(--color-accent-primary)]/10 text-[var(--color-text-primary)]"
                   }`}
                 >
                   {type === "all" ? "All" : type === "hybrid" ? "Hybrid" : type === "remote" ? "Fully Remote" : "Office"}

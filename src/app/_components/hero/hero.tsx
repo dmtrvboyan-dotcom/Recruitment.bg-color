@@ -18,13 +18,13 @@ const AnimatedCounter = memo(function AnimatedCounter({
   const { ref, displayValue } = useAnimatedCounter(value)
 
   return (
-    <div ref={ref} className="text-center transition-all lg:p-5 md:p-5 sm:p-5 p-0  hover:bg-[#ededed] rounded-3xl text-[#085689] hover:text-[#78B6D9]">
+    <div ref={ref} className="text-center transition-all lg:p-5 md:p-5 sm:p-5 p-0 hover:bg-[var(--color-bg-secondary)] rounded-3xl text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)]">
       <p className="lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold mb-3 tracking-tighter tabular-nums">
         {displayValue}
       </p>
-      <p className="text-sm font-semibold text-muted-foreground mb-1">{label}</p>
+      <p className="text-sm font-semibold text-[var(--color-muted-foreground)] mb-1">{label}</p>
       {description && (
-        <p className="text-sm text-slate-600 max-w-[260px] mx-auto">{description}</p>
+        <p className="text-sm text-[var(--color-muted-foreground)] max-w-[260px] mx-auto">{description}</p>
       )}
     </div>
   )
@@ -36,7 +36,7 @@ export const Hero = memo(function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 bg-linear-to-b from-[#f9f9f9] to-[#085689]/12">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)]">
       <div
         className="absolute inset-0 bg-[size:4rem_4rem]"
         aria-hidden="true"
@@ -45,13 +45,13 @@ export const Hero = memo(function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto text-center">
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[500] font-poppins text-foreground leading-[1.1] text-balance mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[500] font-poppins text-[var(--color-text-primary)] leading-[1.1] text-balance mb-6">
             IT Recruitment Agency cloning{" "}
-            <span className="text-[#085689]">Tech Roles</span>
+            <span className="text-[var(--color-accent-primary)]">Tech Roles</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-pretty">
+          <p className="text-lg md:text-xl text-[var(--color-muted-foreground)] max-w-2xl mx-auto mb-12 text-pretty">
             We connect companies with IT professionals through recruitment and talent acquisition services.
           </p>
 
@@ -62,20 +62,20 @@ export const Hero = memo(function Hero() {
           <div className="flex flex-row items-center justify-center gap-4">
             <Button
               onClick={() => handleNavigate("#services")}
-              className="bg-[#085689] lg:w-[150px] w-[110px] lg:text-md text-sm text-white hover:bg-[#78B6D9] hover:text-black rounded-lg px-8 py-6 cursor-pointer"
+              className="bg-[var(--color-accent-primary)] lg:w-[150px] w-[110px] lg:text-md text-sm text-white hover:bg-[var(--color-accent-primary)]/90 rounded-lg px-8 py-6 cursor-pointer shadow-md hover:shadow-lg transition-all"
             >
               Learn More
             </Button>
             <Button
               onClick={() => handleNavigate("#jobs")}
               variant="outline"
-              className="bg-transparent lg:w-[150px] w-[110px] text-sm text-black hover:bg-[#085689] bg-[#78B6D9] hover:text-white rounded-lg px-8 py-6 border-2 border-[#78B6D9]/50 cursor-pointer"
+              className="lg:w-[150px] w-[110px] text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-accent-primary)] hover:text-white rounded-lg px-8 py-6 border-2 border-[var(--color-border)] cursor-pointer transition-all"
             >
               Find a job
             </Button>
           </div>
 
-          <div className=" bg-[#f3f3f368]  p-12 -mt-7 rounded-4xl ">
+          <div className="bg-white/60 p-12 -mt-7 rounded-3xl shadow-sm border border-[var(--color-border)]">
             {/* <p className="text-md font-medium tracking-wider text-[#085689] uppercase mb-6">
               Our Track Record
             </p> */}

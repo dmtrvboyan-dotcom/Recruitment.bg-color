@@ -10,46 +10,57 @@
   --font-sans: "Poppins";
   --font-mono: "Fira Code", "Fira Code Fallback";
 
-  /* --color-background: oklch(94.611% 0.00011 271.152); */
-  --color-background: oklch(0.9821 0 0);
+  /* 60-30-10 Color System */
+  /* 60% - Primary Backgrounds */
+  --color-bg-primary: #f9f9f9;
+  --color-bg-secondary: #F8F7F4;
+  
+  /* 30% - Text & Structure */
+  --color-text-primary: #0f172b;
+  --color-text-secondary: #0a3d62;
+  
+  /* 10% - Accent (CTA & Highlights) */
+  --color-accent-primary: #FF7F7F;
 
-  --color-foreground: oklch(14.08% 0 0);
-  --color-card: oklch(100% 0 0);
-  --color-card-foreground: oklch(14.08% 0 0);
-  --color-popover: oklch(100% 0 0);
-  --color-popover-foreground: oklch(14.08% 0 0);
-  --color-primary: oklch(16.23% 0 0);
-  --color-primary-foreground: oklch(98.49% 0 0);
-  --color-secondary: oklch(96.08% 0 0);
-  --color-secondary-foreground: oklch(16.23% 0 0);
-  --color-muted: oklch(96.08% 0 0);
-  --color-muted-foreground: oklch(55.19% 0 0);
-  --color-accent: oklch(96.08% 0 0);
-  --color-accent-foreground: oklch(16.23% 0 0);
-  --color-destructive: oklch(57.71% 0.215 27.33);
-  --color-destructive-foreground: oklch(98.49% 0 0);
-  --color-border: oklch(90.45% 0 0);
-  --color-input: oklch(90.45% 0 0);
-  --color-ring: oklch(14.08% 0 0);
-  --color-chart-1: oklch(48.81% 0.217 264.38);
-  --color-chart-2: oklch(69.59% 0.149 143.88);
-  --color-chart-3: oklch(47.66% 0.165 261.26);
-  --color-chart-4: oklch(76.81% 0.15 75.08);
-  --color-chart-5: oklch(64.62% 0.206 26.18);
-  --color-sidebar: oklch(98.49% 0 0);
-  --color-sidebar-foreground: oklch(14.08% 0 0);
-  --color-sidebar-primary: oklch(16.23% 0 0);
-  --color-sidebar-primary-foreground: oklch(98.49% 0 0);
-  --color-sidebar-accent: oklch(96.08% 0 0);
-  --color-sidebar-accent-foreground: oklch(16.23% 0 0);
-  --color-sidebar-border: oklch(90.45% 0 0);
-  --color-sidebar-ring: oklch(14.08% 0 0);
+  /* Semantic tokens mapped to 60-30-10 */
+  --color-background: #f9f9f9;
+  --color-foreground: #0f172b;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f172b;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f172b;
+  --color-primary: #FF7F7F;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #F8F7F4;
+  --color-secondary-foreground: #0f172b;
+  --color-muted: #F8F7F4;
+  --color-muted-foreground: #64748b;
+  --color-accent: #FF7F7F;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+  --color-ring: #FF7F7F;
+  --color-chart-1: #FF7F7F;
+  --color-chart-2: #0a3d62;
+  --color-chart-3: #64748b;
+  --color-chart-4: #94a3b8;
+  --color-chart-5: #cbd5e1;
+  --color-sidebar: #ffffff;
+  --color-sidebar-foreground: #0f172b;
+  --color-sidebar-primary: #FF7F7F;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #F8F7F4;
+  --color-sidebar-accent-foreground: #0f172b;
+  --color-sidebar-border: #e2e8f0;
+  --color-sidebar-ring: #FF7F7F;
 
-  --radius-lg: 0.625rem;
+  --radius-lg: 0.75rem;
   --radius-md: 0.5rem;
   --radius-sm: 0.375rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -75,47 +86,45 @@
   }
 }
 
-/* Brand colors for Recruitment.bg */
-:root {
-  --color-brand-primary: oklch(35% 0.15 210);
-  --color-brand-secondary: oklch(50% 0.12 200);
-  --color-brand-accent: oklch(70% 0.18 180);
-}
-
-/* Dark mode overrides */
+/* Dark mode overrides - maintains 60-30-10 principle */
 .dark {
-  --color-background: oklch(14.08% 0 0);
-  --color-foreground: oklch(98.49% 0 0);
-  --color-card: oklch(14.08% 0 0);
-  --color-card-foreground: oklch(98.49% 0 0);
-  --color-popover: oklch(14.08% 0 0);
-  --color-popover-foreground: oklch(98.49% 0 0);
-  --color-primary: oklch(98.49% 0 0);
-  --color-primary-foreground: oklch(16.23% 0 0);
-  --color-secondary: oklch(25.33% 0 0);
-  --color-secondary-foreground: oklch(98.49% 0 0);
-  --color-muted: oklch(25.33% 0 0);
-  --color-muted-foreground: oklch(70.87% 0 0);
-  --color-accent: oklch(25.33% 0 0);
-  --color-accent-foreground: oklch(98.49% 0 0);
-  --color-destructive: oklch(62.94% 0.237 15.17);
-  --color-destructive-foreground: oklch(98.49% 0 0);
-  --color-border: oklch(25.33% 0 0);
-  --color-input: oklch(25.33% 0 0);
-  --color-ring: oklch(83.89% 0 0);
-  --color-chart-1: oklch(66.25% 0.184 230.86);
-  --color-chart-2: oklch(76.56% 0.122 172.09);
-  --color-chart-3: oklch(98.49% 0 0);
-  --color-chart-4: oklch(73.04% 0.153 46.81);
-  --color-chart-5: oklch(64.62% 0.206 26.18);
-  --color-sidebar: oklch(14.08% 0 0);
-  --color-sidebar-foreground: oklch(98.49% 0 0);
-  --color-sidebar-primary: oklch(48.81% 0.217 264.38);
-  --color-sidebar-primary-foreground: oklch(98.49% 0 0);
-  --color-sidebar-accent: oklch(25.33% 0 0);
-  --color-sidebar-accent-foreground: oklch(98.49% 0 0);
-  --color-sidebar-border: oklch(25.33% 0 0);
-  --color-sidebar-ring: oklch(83.89% 0 0);
+  --color-bg-primary: #0f172b;
+  --color-bg-secondary: #1e293b;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  
+  --color-background: #0f172b;
+  --color-foreground: #f8fafc;
+  --color-card: #1e293b;
+  --color-card-foreground: #f8fafc;
+  --color-popover: #1e293b;
+  --color-popover-foreground: #f8fafc;
+  --color-primary: #FF7F7F;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #334155;
+  --color-secondary-foreground: #f8fafc;
+  --color-muted: #334155;
+  --color-muted-foreground: #94a3b8;
+  --color-accent: #FF7F7F;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #334155;
+  --color-input: #334155;
+  --color-ring: #FF7F7F;
+  --color-chart-1: #FF7F7F;
+  --color-chart-2: #64748b;
+  --color-chart-3: #94a3b8;
+  --color-chart-4: #cbd5e1;
+  --color-chart-5: #e2e8f0;
+  --color-sidebar: #1e293b;
+  --color-sidebar-foreground: #f8fafc;
+  --color-sidebar-primary: #FF7F7F;
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: #334155;
+  --color-sidebar-accent-foreground: #f8fafc;
+  --color-sidebar-border: #334155;
+  --color-sidebar-ring: #FF7F7F;
 }
 
 @layer base {

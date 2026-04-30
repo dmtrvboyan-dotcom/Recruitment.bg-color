@@ -27,19 +27,19 @@ const DesktopDropdown = memo(function DesktopDropdown({
   onNavigate: (href: string, openInNewTab?: boolean) => void
 }) {
   return (
-    <div className="relative group ">
+    <div className="relative group">
       <button
         onClick={onToggle}
-        className="group flex items-center gap-1.5 text-md text-foreground/80 hover:text-primary transition-colors duration-200 py-1 cursor-pointer"
+        className="group flex items-center gap-1.5 text-md text-[var(--color-text-primary)]/80 hover:text-[var(--color-accent-primary)] transition-colors duration-200 py-1 cursor-pointer"
       >
         {item.label}
         <ChevronDown
-          className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""} `}
+          className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 
       <div
-        className={`absolute top-full left-0 mt-3 w-56 bg-[#f5f5f5] rounded-2xl shadow-xl py-3 px-2 transition-all duration-300 origin-top ${
+        className={`absolute top-full left-0 mt-3 w-56 bg-[var(--color-bg-secondary)] rounded-2xl shadow-xl py-3 px-2 transition-all duration-300 origin-top border border-[var(--color-border)] ${
           isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none cursor-pointer"
         }`}
       >
@@ -47,7 +47,7 @@ const DesktopDropdown = memo(function DesktopDropdown({
           <button
             key={subItem.label}
             onClick={() => onNavigate(subItem.href, subItem.openInNewTab)}
-            className="w-full text-left px-5 py-3 hover:text-[#085689] rounded-xl text-[15px] transition-colors cursor-pointer"
+            className="w-full text-left px-5 py-3 text-[var(--color-text-primary)] hover:text-[var(--color-accent-primary)] hover:bg-[var(--color-bg-primary)] rounded-xl text-[15px] transition-colors cursor-pointer"
           >
             {subItem.label}
           </button>
@@ -72,7 +72,7 @@ const MobileDropdown = memo(function MobileDropdown({
     <div>
       <button
         onClick={onToggle}
-        className="flex items-center justify-between w-full py-3 text-left text-lg text-white hover:text-white/80 transition-all border-b border-white/20 cursor-pointer"
+        className="flex items-center justify-between w-full py-3 text-left text-lg text-white hover:text-[var(--color-accent-primary)] transition-all border-b border-white/20 cursor-pointer"
       >
         {item.label}
         <ChevronDown
@@ -82,14 +82,14 @@ const MobileDropdown = memo(function MobileDropdown({
 
       <div
         className={`pl-6 mt-2 transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0 "
+          isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         {item.dropdownItems?.map((subItem) => (
           <button
             key={subItem.label}
             onClick={() => onNavigate(subItem.href, subItem.openInNewTab)}
-            className="block py-3 text-white/90 hover:text-white w-full text-left cursor-pointer"
+            className="block py-3 text-white/90 hover:text-[var(--color-accent-primary)] w-full text-left cursor-pointer"
           >
             {subItem.label}
           </button>
@@ -176,7 +176,7 @@ export function Header() {
                   <button
                     key={item.label}
                     onClick={() => handleNavigate(item.href!)}
-                    className="group relative text-md text-foreground/80 hover:text-primary transition-colors duration-200 py-1 cursor-pointer"
+                    className="group relative text-md text-[var(--color-text-primary)]/80 hover:text-[var(--color-accent-primary)] transition-colors duration-200 py-1 cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -185,7 +185,7 @@ export function Header() {
 
               <Button
                 onClick={() => handleNavigate("#contact")}
-                className="bg-[#085689] hover:bg-[#78B6D9] text-primary-foreground rounded-lg px-6 py-5 cursor-pointer"
+                className="bg-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)]/90 text-white rounded-lg px-6 py-5 cursor-pointer shadow-md hover:shadow-lg transition-all"
               >
                 Contact Us
               </Button>
@@ -196,11 +196,11 @@ export function Header() {
               {/* Phone number — only visible on desktop when scrolled */}
               <a
                 href={PHONE_HREF}
-                className={`hidden lg:flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-[#085689] transition-all duration-300 ${
+                className={`hidden lg:flex items-center gap-2 text-sm font-medium text-[var(--color-text-primary)]/80 hover:text-[var(--color-accent-primary)] transition-all duration-300 ${
                   isScrolled ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 }`}
               >
-                <Phone size={15} className="text-[#085689]" />
+                <Phone size={15} className="text-[var(--color-accent-primary)]" />
                 {PHONE_NUMBER}
               </a>
 
@@ -228,7 +228,7 @@ export function Header() {
         <div className="absolute inset-0 bg-black/50" onClick={closeMenu} />
 
         <div
-          className={`absolute top-0 right-0 h-full w-full lg:w-1/2 bg-[#085689] shadow-2xl transform transition-transform duration-500 ease-out ${
+          className={`absolute top-0 right-0 h-full w-full lg:w-1/2 bg-[var(--color-text-secondary)] shadow-2xl transform transition-transform duration-500 ease-out ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -287,7 +287,7 @@ export function Header() {
 
               <Button
                 onClick={() => handleNavigate("#contact")}
-                className="w-full bg-white text-[#000000] hover:bg-white/90 rounded-xl py-6 text-base font-medium cursor-pointer"
+                className="w-full bg-[var(--color-accent-primary)] text-white hover:bg-[var(--color-accent-primary)]/90 rounded-xl py-6 text-base font-medium cursor-pointer shadow-lg"
               >
                 Contact Us
               </Button>

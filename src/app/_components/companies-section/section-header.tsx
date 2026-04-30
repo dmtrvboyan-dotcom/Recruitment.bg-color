@@ -10,8 +10,8 @@ export const SectionHeader = memo(function SectionHeader({
 }) {
   const styles =
     variant === "dark"
-      ? "bg-slate-900 text-white"
-      : "bg-[#085689]/10 text-[#085689]"
+      ? "bg-[var(--color-text-primary)] text-white"
+      : "bg-[var(--color-accent-primary)]/10 text-[var(--color-accent-primary)]"
 
   return (
     <div className="flex justify-center lg:justify-start mb-8">

@@ -22,22 +22,22 @@ export const MobileServiceItem = memo(function MobileServiceItem({
   }, [])
 
   return (
-    <div className="border border-slate-200 rounded-2xl overflow-hidden bg-[#f5f5f5] mb-4 last:mb-0 transition-all duration-300">
+    <div className="border border-[var(--color-border)] rounded-2xl overflow-hidden bg-white mb-4 last:mb-0 transition-all duration-300">
       <button
         onClick={onToggle}
         className="w-full px-6 py-6 flex items-center justify-between text-left group transition-colors"
       >
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-lg bg-[#085689]/10 flex-shrink-0 flex items-center justify-center group-hover:bg-[#085689]/20 transition-colors">
-            <IconComponent className="w-6 h-6 text-[#085689]" />
+          <div className="w-12 h-12 rounded-lg bg-[var(--color-accent-primary)]/10 flex-shrink-0 flex items-center justify-center group-hover:bg-[var(--color-accent-primary)]/20 transition-colors">
+            <IconComponent className="w-6 h-6 text-[var(--color-accent-primary)]" />
           </div>
-          <h3 className="text-lg font-semibold text-black pr-4 leading-tight">
+          <h3 className="text-lg font-semibold text-[var(--color-text-primary)] pr-4 leading-tight">
             {service.title}
           </h3>
         </div>
 
         <ChevronDown
-          className={`w-6 h-6 text-[#085689] transition-transform duration-500 shrink-0 ${
+          className={`w-6 h-6 text-[var(--color-accent-primary)] transition-transform duration-500 shrink-0 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -50,23 +50,23 @@ export const MobileServiceItem = memo(function MobileServiceItem({
       >
         <div className="px-6 pb-8">
           {service.subtitle && (
-            <p className="text-[#085689] font-medium mb-4">{service.subtitle}</p>
+            <p className="text-[var(--color-text-secondary)] font-medium mb-4">{service.subtitle}</p>
           )}
 
           {/* Sections */}
           <div className="space-y-6">
             {service.sections.map((section, idx) => (
               <div key={idx}>
-                <h4 className="text-lg font-semibold text-black mb-3">
+                <h4 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">
                   {section.heading}
                 </h4>
                 <ul className="space-y-2">
                   {section.points.map((point, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-3 text-base leading-relaxed text-gray-600"
+                      className="flex items-start gap-3 text-base leading-relaxed text-[var(--color-muted-foreground)]"
                     >
-                      <span className="text-[#085689] text-lg leading-none mt-0.5 flex-shrink-0">
+                      <span className="text-[var(--color-accent-primary)] text-lg leading-none mt-0.5 flex-shrink-0">
                         &bull;
                       </span>
                       <span>{point}</span>
@@ -78,18 +78,18 @@ export const MobileServiceItem = memo(function MobileServiceItem({
           </div>
 
           {/* Stats + button — unified for all services */}
-          <div className="mt-8 border-t border-gray-200 pt-6 flex flex-col gap-6">
+          <div className="mt-8 border-t border-[var(--color-border)] pt-6 flex flex-col gap-6">
             <div className="grid grid-cols-3 gap-4">
               {service.stats.map((stat, idx) => (
                 <div key={idx} className="text-center">
-                  <div className="text-2xl font-bold text-[#085689]">{stat.value}</div>
-                  <div className="text-xs text-gray-600 mt-1 leading-snug">{stat.label}</div>
+                  <div className="text-2xl font-bold text-[var(--color-accent-primary)]">{stat.value}</div>
+                  <div className="text-xs text-[var(--color-muted-foreground)] mt-1 leading-snug">{stat.label}</div>
                 </div>
               ))}
             </div>
             <Button
               onClick={() => handleNavigate(service.learnMoreHref ?? "#contact")}
-              className="w-full bg-[#085689] hover:bg-[#0a6a9c] text-white py-3 rounded-xl text-base font-medium cursor-pointer"
+              className="w-full bg-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)]/90 text-white py-3 rounded-xl text-base font-medium cursor-pointer shadow-md"
             >
               Learn more <Users className="w-4 h-4 ml-2" />
             </Button>

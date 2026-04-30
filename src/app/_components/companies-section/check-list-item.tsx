@@ -8,8 +8,8 @@ export const CheckListItem = memo(function CheckListItem({
   item: string
   variant?: "dark" | "brand"
 }) {
-  const bgColor = variant === "dark" ? "bg-slate-900" : "bg-[#085689]/10"
-  const iconColor = variant === "dark" ? "text-white" : "text-[#085689]"
+  const bgColor = variant === "dark" ? "bg-[var(--color-text-primary)]" : "bg-[var(--color-accent-primary)]/10"
+  const iconColor = variant === "dark" ? "text-white" : "text-[var(--color-accent-primary)]"
 
   return (
     <li className="flex gap-4">
@@ -18,7 +18,7 @@ export const CheckListItem = memo(function CheckListItem({
       >
         <CheckCircle className={`w-4 h-4 ${iconColor}`} />
       </div>
-      <p className="text-lg text-slate-700 leading-relaxed">{item}</p>
+      <p className="text-lg text-[var(--color-muted-foreground)] leading-relaxed">{item}</p>
     </li>
   )
 })

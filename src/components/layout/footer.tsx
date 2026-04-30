@@ -18,7 +18,7 @@ const FooterLinkSection = memo(function FooterLinkSection({
 }) {
   return (
     <div>
-      <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-[#085689]">
+      <h4 className="text-sm font-semibold uppercase tracking-wider mb-4 text-[var(--color-text-secondary)]">
         {title}
       </h4>
       <ul className="flex flex-col gap-3">
@@ -29,14 +29,14 @@ const FooterLinkSection = memo(function FooterLinkSection({
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-slate-500 hover:text-[#78B6D9] text-left transition-colors cursor-pointer block"
+                className="text-sm text-[var(--color-muted-foreground)] hover:text-[var(--color-accent-primary)] text-left transition-colors cursor-pointer block"
               >
                 {link.label}
               </Link>
             ) : (
               <button
                 onClick={() => onNavigate(link.href)}
-                className="text-sm text-slate-500 hover:text-[#78B6D9] text-left transition-colors cursor-pointer"
+                className="text-sm text-[var(--color-muted-foreground)] hover:text-[var(--color-accent-primary)] text-left transition-colors cursor-pointer"
               >
                 {link.label}
               </button>
@@ -55,9 +55,9 @@ const SocialLinks = memo(function SocialLinks({ phoneHref }: { phoneHref: string
       <a
         href={phoneHref}
         aria-label="Call us"
-        className="md:hidden w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all group cursor-pointer"
+        className="md:hidden w-10 h-10 rounded-lg bg-[var(--color-text-secondary)]/10 flex items-center justify-center hover:bg-[var(--color-accent-primary)]/10 transition-all group cursor-pointer"
       >
-        <Phone className="w-5 h-5 text-[#78B6D9] group-hover:scale-110 transition-transform" />
+        <Phone className="w-5 h-5 text-[var(--color-accent-primary)] group-hover:scale-110 transition-transform" />
       </a>
 
       {SOCIAL_LINKS.map((social) => {
@@ -68,10 +68,10 @@ const SocialLinks = memo(function SocialLinks({ phoneHref }: { phoneHref: string
             href={social.href}
             target={social.href.startsWith("http") ? "_blank" : undefined}
             rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all group cursor-pointer"
+            className="w-10 h-10 rounded-lg bg-[var(--color-text-secondary)]/10 flex items-center justify-center hover:bg-[var(--color-accent-primary)]/10 transition-all group cursor-pointer"
             aria-label={social.label}
           >
-            <IconComponent className="w-5 h-5 text-[#78B6D9] group-hover:scale-110 transition-transform" />
+            <IconComponent className="w-5 h-5 text-[var(--color-accent-primary)] group-hover:scale-110 transition-transform" />
           </a>
         )
       })}
@@ -87,7 +87,7 @@ export function Footer() {
   }, [])
 
   return (
-    <footer className="bg-[#f9f9f9] text-black border-t border-white/10 mt-[-150px]">
+    <footer className="bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)] border-t border-[var(--color-border)] mt-[-150px]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand / Logo */}
@@ -100,20 +100,20 @@ export function Footer() {
               />
             </Link>
 
-            <p className="text-black text-sm leading-relaxed mb-2 max-w-xs">
+            <p className="text-[var(--color-text-primary)] text-sm leading-relaxed mb-2 max-w-xs">
               {COMPANY_INFO.description}
             </p>
 
-            <p className="text-[#085689] font-medium text-sm mb-4">
+            <p className="text-[var(--color-text-secondary)] font-medium text-sm mb-4">
               {COMPANY_INFO.location}
             </p>
 
             {/* Phone — icon + number on desktop only */}
             <a
               href={COMPANY_INFO.phoneHref}
-              className="hidden md:inline-flex items-center gap-2 text-sm text-slate-500 hover:text-[#085689] transition-colors mb-6 group"
+              className="hidden md:inline-flex items-center gap-2 text-sm text-[var(--color-muted-foreground)] hover:text-[var(--color-accent-primary)] transition-colors mb-6 group"
             >
-              <Phone className="w-4 h-4 text-[#085689] flex-shrink-0" />
+              <Phone className="w-4 h-4 text-[var(--color-accent-primary)] flex-shrink-0" />
               <span>{COMPANY_INFO.phoneNumber}</span>
             </a>
 
@@ -139,22 +139,22 @@ export function Footer() {
           />
         </div>
 
-        <Separator className="my-12 bg-white/10" />
+        <Separator className="my-12 bg-[var(--color-border)]" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
-          <p className="text-slate-500">
+          <p className="text-[var(--color-muted-foreground)]">
             &copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link
               href="#"
-              className="text-slate-500 hover:text-[#78B6D9] transition-colors cursor-pointer"
+              className="text-[var(--color-muted-foreground)] hover:text-[var(--color-accent-primary)] transition-colors cursor-pointer"
             >
               Privacy Policy
             </Link>
             <Link
               href="#"
-              className="text-slate-500 hover:text-[#78B6D9] transition-colors cursor-pointer"
+              className="text-[var(--color-muted-foreground)] hover:text-[var(--color-accent-primary)] transition-colors cursor-pointer"
             >
               Terms of Service
             </Link>
