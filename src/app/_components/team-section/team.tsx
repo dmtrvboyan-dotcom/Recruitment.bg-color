@@ -25,10 +25,10 @@ export function MeetTheTeam() {
         {/* Header */}
         <div className="text-center mb-20">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-brand-coral mb-4">
-            Our Culture
+    About us
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy mb-8">
-            The faces behind the <span className="text-brand-blue">talent</span>
+            Nice to meet <span className="text-brand-coral"> you</span>
           </h2>
           
           <div className="flex flex-wrap items-center justify-center gap-y-3 gap-x-8">

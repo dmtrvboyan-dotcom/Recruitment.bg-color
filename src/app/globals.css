@@ -46,7 +46,7 @@
 
   
   /* ── Brand tokens — generates bg-brand-*, text-brand-*, border-brand-* ── */
-  --color-brand-bg:           #f9f9f9;
+  /* --color-brand-bg:           #f9f9f9; */
   --color-brand-navy:         #1A1A2E;
   --color-brand-navy-mid:     #2C3E50;
   --color-brand-blue:         #085689;
