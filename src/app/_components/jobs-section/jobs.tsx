@@ -40,7 +40,7 @@ export function JobsSection() {
   )
 
   return (
-    <section id="jobs" className="py-16 lg:py-24 lg:pb-[170px] md:pb-[50px] bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)]">
+    <section id="jobs" className="py-16 lg:py-24 lg:pb-[170px] md:pb-[50px] bg-[#f9f9f9]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {selectedJob && (
           <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
@@ -48,26 +48,26 @@ export function JobsSection() {
 
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sm font-medium text-[var(--color-accent-primary)] uppercase tracking-widest mb-3">Careers</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--color-text-primary)] mb-6">Job Positions</h2>
+          <p className="text-sm font-medium text-[#FF7F7F] uppercase tracking-widest mb-3">Careers</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#0a3d62] mb-6">Job Positions</h2>
         </div>
 
         {/* Search */}
         <div className="flex justify-center mb-10">
           <div className="w-full md:w-[50%]">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-muted-foreground)] w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-[#0a3d62]/50 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search jobs by title or technology..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white border border-[var(--color-border)] pl-12 pr-12 py-4 rounded-3xl text-lg text-[var(--color-text-primary)] focus:outline-none focus:border-[var(--color-accent-primary)] transition-colors"
+                className="w-full bg-white border border-slate-200 pl-12 pr-12 py-4 rounded-3xl text-lg text-[#0a3d62] focus:outline-none focus:border-[#0a3d62] transition-colors"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-muted-foreground)] hover:text-[var(--color-text-primary)]"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[#0a3d62]/50 hover:text-[#0a3d62]"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -113,7 +113,7 @@ export function JobsSection() {
             </div>
 
             {filteredJobs.length === 0 && (
-              <div className="text-center py-20 text-[var(--color-muted-foreground)]">
+              <div className="text-center py-20 text-[#0a3d62]/60">
                 No jobs found matching your criteria.
               </div>
             )}

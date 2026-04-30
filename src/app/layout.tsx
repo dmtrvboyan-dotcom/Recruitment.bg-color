@@ -68,10 +68,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${firaCode.variable} bg-background`}
+      className={`${poppins.variable} ${firaCode.variable} bg-[#f9f9f9]`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen font-sans antialiased">{children}</body>
+      <body className="min-h-screen font-sans antialiased bg-[#f9f9f9]">{children}</body>
     </html>
   )
 }

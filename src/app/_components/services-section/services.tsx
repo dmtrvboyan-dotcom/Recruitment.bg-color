@@ -27,14 +27,14 @@ export function Services() {
   return (
     <section
       id="services"
-      className="py-24 lg:py-32 lg:pb-[170px] md:pb-[50px] bg-gradient-to-b from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)]"
+      className="py-24 lg:py-32 lg:pb-[170px] md:pb-[50px] bg-[#f9f9f9]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center mb-16 lg:mb-20">
-          <p className="text-md font-medium text-[var(--color-accent-primary)] uppercase tracking-wider mb-4">
+          <p className="text-md font-medium text-[#FF7F7F] uppercase tracking-wider mb-4">
             Our Services
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--color-text-primary)] mb-6 text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0a3d62] mb-6 text-balance">
             Our IT Recruitment Services
           </h2>
         </div>
@@ -64,7 +64,7 @@ export function Services() {
         </div>
 
         <div className="text-center">
-          <p className="text-xl text-[var(--color-muted-foreground)] leading-relaxed mt-[80px]">
+          <p className="text-xl text-[#0a3d62]/70 leading-relaxed mt-[80px]">
             We provide end-to-end IT recruitment services, helping companies hire top tech talent
             locally and globally.
           </p>

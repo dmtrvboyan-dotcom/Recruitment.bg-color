@@ -18,7 +18,7 @@ export const FilterSection = memo(function FilterSection({
     <div>
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between text-lg font-semibold mb-3 hover:text-[#085689] transition-colors"
+        className="w-full flex items-center justify-between text-lg font-semibold mb-3 text-[#0a3d62] hover:text-[#0a3d62]/80 transition-colors"
       >
         {title}
         <ChevronDown

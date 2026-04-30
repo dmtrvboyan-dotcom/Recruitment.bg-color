@@ -17,18 +17,18 @@ export function CallToAction() {
   return (
     <section
       id="contact"
-      className="py-24 lg:py-32 lg:pb-[170px] md:pb-[50px] mb-50 bg-gradient-to-b from-[var(--color-bg-secondary)] to-[var(--color-bg-primary)]"
+      className="py-24 lg:py-32 lg:pb-[170px] md:pb-[50px] mb-50 bg-[#f9f9f9]"
     >
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-[var(--color-accent-primary)] uppercase tracking-widest mb-3">
+          <p className="text-sm font-medium text-[#FF7F7F] uppercase tracking-widest mb-3">
             Get in Touch
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[var(--color-text-primary)] mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#0a3d62] mb-6">
             Let&apos;s Start a Conversation
           </h2>
-          <p className="text-xl text-[var(--color-muted-foreground)] leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-[#0a3d62]/70 leading-relaxed max-w-3xl mx-auto">
             Whether you&apos;re looking to hire top IT talent or seeking your next career
             opportunity, we&apos;re here to help.
           </p>
@@ -36,7 +36,7 @@ export function CallToAction() {
 
         {/* Tabs */}
         <div className="flex justify-center mb-10">
-          <div className="inline-flex rounded-full p-1 bg-[var(--color-bg-secondary)] border border-[var(--color-border)]">
+          <div className="inline-flex rounded-full p-1 bg-slate-50 border border-slate-100">
             {TABS.map((tab) => (
               <TabButton
                 key={tab.value}
@@ -50,7 +50,7 @@ export function CallToAction() {
 
         {/* Form */}
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white border border-[var(--color-border)] p-8 lg:p-12 shadow-sm rounded-3xl">
+          <div className="bg-white border border-slate-100 p-8 lg:p-12 shadow-sm rounded-3xl">
             <ContactForm key={activeTab} mode={activeTab} />
           </div>
         </div>

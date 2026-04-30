@@ -15,8 +15,8 @@ export function TabButton({ label, isActive, onClick }: TabButtonProps) {
       onClick={onClick}
       className={`rounded-full px-8 py-3 transition-all ${
         isActive
-          ? "bg-[var(--color-accent-primary)] text-white shadow hover:bg-[var(--color-accent-primary)]/90"
-          : "text-[var(--color-muted-foreground)] hover:bg-white hover:text-[var(--color-text-primary)]"
+          ? "bg-[#0a3d62] text-white shadow hover:bg-[#0a3d62]/90"
+          : "text-[#0a3d62]/60 hover:bg-white hover:text-[#0a3d62]"
       }`}
     >
       {label}

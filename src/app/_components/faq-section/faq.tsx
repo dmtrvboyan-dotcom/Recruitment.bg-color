@@ -23,15 +23,15 @@ export function FAQSection() {
   return (
     <section
       id="faq"
-      className="py-20 lg:py-28 bg-transparent lg:pb-[170px] md:pb-[50px] bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)]"
+      className="py-20 lg:py-28 bg-[#f9f9f9] lg:pb-[170px] md:pb-[50px]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-4">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-md font-medium text-[var(--color-accent-primary)] uppercase tracking-wider mb-4">
+          <p className="text-md font-medium text-[#FF7F7F] uppercase tracking-wider mb-4">
             Got questions?
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--color-text-primary)] mb-6 text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#0a3d62] mb-6 text-balance">
             Frequently Asked Questions
           </h2>
         </div>
@@ -66,7 +66,7 @@ export function FAQSection() {
         <div className="flex justify-center mt-16">
           <Button
             onClick={() => scrollToSection("#contact")}
-            className="bg-[var(--color-accent-primary)] text-white hover:bg-[var(--color-accent-primary)]/90 rounded-lg px-8 py-6 text-base cursor-pointer shadow-md hover:shadow-lg transition-all"
+            className="bg-[#0a3d62] text-white hover:bg-[#0a3d62]/90 rounded-lg px-8 py-6 text-base cursor-pointer shadow-sm hover:shadow-md transition-all"
           >
             Still have questions? Let&apos;s talk
           </Button>

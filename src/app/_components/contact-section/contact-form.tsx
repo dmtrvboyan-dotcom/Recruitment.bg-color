@@ -97,12 +97,12 @@ export function ContactForm({ mode = "candidate" }: ContactFormProps) {
   if (isSubmitted) {
     return (
       <div className="flex flex-col items-center justify-center py-12 text-center">
-        <div className="w-16 h-16 rounded-full bg-[var(--color-accent-primary)]/10 flex items-center justify-center mb-6">
-          <CheckCircle className="w-8 h-8 text-[var(--color-accent-primary)]" />
+        <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mb-6">
+          <CheckCircle className="w-8 h-8 text-green-600" />
         </div>
-        <h3 className="text-2xl font-semibold text-[var(--color-text-primary)] mb-2">Thank you!</h3>
-        <p className="text-[var(--color-muted-foreground)]">We&apos;ll get back to you within 24 hours.</p>
-        <Button variant="outline" className="mt-6 border-[var(--color-border)] hover:bg-[var(--color-accent-primary)]/10 hover:text-[var(--color-accent-primary)]" onClick={resetForm}>
+        <h3 className="text-2xl font-semibold text-[#0a3d62] mb-2">Thank you!</h3>
+        <p className="text-[#0a3d62]/70">We&apos;ll get back to you within 24 hours.</p>
+        <Button variant="outline" className="mt-6 border-slate-200 hover:bg-slate-50 hover:text-[#0a3d62]" onClick={resetForm}>
           Send another message
         </Button>
       </div>
@@ -193,12 +193,12 @@ export function ContactForm({ mode = "candidate" }: ContactFormProps) {
 
         <MessageField form={form} interest={interest} mode={mode} />
 
-        <div className="pt-4 border-t border-[var(--color-border)]">
-          <FormLabel className="text-sm font-medium text-[var(--color-text-primary)] mb-2 block">
+        <div className="pt-4 border-t border-slate-100">
+          <FormLabel className="text-sm font-medium text-[#0a3d62] mb-2 block">
             Security Check
           </FormLabel>
           <div className="flex flex-col sm:flex-row gap-4 items-start">
-            <div className="bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-xl px-5 py-3 text-lg font-mono tracking-wider flex-shrink-0 text-[var(--color-text-primary)]">
+            <div className="bg-slate-50 border border-slate-100 rounded-xl px-5 py-3 text-lg font-mono tracking-wider flex-shrink-0 text-[#0a3d62]">
               {CAPTCHA_QUESTION}
             </div>
             <div className="flex-1 w-full">
@@ -214,21 +214,21 @@ export function ContactForm({ mode = "candidate" }: ContactFormProps) {
               )}
             </div>
           </div>
-          <p className="text-xs text-[var(--color-muted-foreground)] mt-2">
+          <p className="text-xs text-[#0a3d62]/60 mt-2">
             Please solve this simple math question to prove you&apos;re not a robot.
           </p>
         </div>
 
         {mode === "candidate" && (
-          <div className="pt-6 border-t border-[var(--color-border)]">
-            <FormLabel className="text-sm font-medium text-[var(--color-text-primary)] mb-2 block">
+          <div className="pt-6 border-t border-slate-100">
+            <FormLabel className="text-sm font-medium text-[#0a3d62] mb-2 block">
               Upload your CV
             </FormLabel>
             <Input
               type="file"
               accept=".pdf,.doc,.docx"
               onChange={(e) => e.target.files?.[0] && setFile(e.target.files[0])}
-              className="h-12 file:bg-[var(--color-accent-primary)] file:text-white file:border-0 file:rounded-md file:px-4 file:mr-4 file:h-full cursor-pointer"
+              className="h-12 file:bg-[#0a3d62] file:text-white file:border-0 file:rounded-md file:px-4 file:mr-4 file:h-full cursor-pointer"
             />
             {file && (
               <div className="mt-3 flex items-center text-sm text-green-600 font-medium">
@@ -236,19 +236,19 @@ export function ContactForm({ mode = "candidate" }: ContactFormProps) {
                 <span>{file.name} uploaded successfully</span>
               </div>
             )}
-            <p className="text-xs text-[var(--color-muted-foreground)] mt-2">
+            <p className="text-xs text-[#0a3d62]/60 mt-2">
               Accepted formats: PDF, DOCX. Max size: 5MB.
             </p>
           </div>
         )}
 
-        <p className="text-center text-sm text-[var(--color-muted-foreground)] mt-6">
+        <p className="text-center text-sm text-[#0a3d62]/60 mt-6">
           We typically reply within 24 hours during business days
         </p>
         <div className="flex justify-center">
           <a
             href="tel:+359888123456"
-            className="flex items-center gap-2 text-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)]/80 transition-colors"
+            className="flex items-center gap-2 text-[#0a3d62] hover:text-[#0a3d62]/80 transition-colors"
           >
             <Phone className="w-5 h-5" />
             <span className="hidden sm:inline text-sm font-medium">
@@ -260,7 +260,7 @@ export function ContactForm({ mode = "candidate" }: ContactFormProps) {
         <Button
           type="submit"
           size="lg"
-          className="w-full bg-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)]/90 text-white cursor-pointer shadow-md"
+          className="w-full bg-[#0a3d62] hover:bg-[#0a3d62]/90 text-white cursor-pointer shadow-sm"
           disabled={isSubmitting}
         >
           {isSubmitting ? <><Spinner className="mr-2" /> Sending...</> : "Send Message"}

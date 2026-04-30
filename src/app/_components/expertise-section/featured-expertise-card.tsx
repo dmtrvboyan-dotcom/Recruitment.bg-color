@@ -11,19 +11,19 @@ export function FeaturedExpertiseCard() {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block p-4 sm:p-8 md:p-10 bg-white rounded-3xl border border-[var(--color-border)] hover:border-[var(--color-accent-primary)]/30 hover:shadow-xl transition-all duration-300 col-span-1 lg:col-span-3 flex flex-col"
+      className="group block p-4 sm:p-8 md:p-10 bg-white rounded-3xl border border-slate-100 hover:border-slate-200 hover:shadow-xl transition-all duration-300 col-span-1 lg:col-span-3 flex flex-col"
     >
       <div className="mb-6">
-        <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-[var(--color-accent-primary)]/10 text-[var(--color-accent-primary)] group-hover:bg-[var(--color-accent-primary)] group-hover:text-white transition-colors">
+        <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-green-50 text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
           <Icon className="w-9 h-9" />
         </div>
       </div>
 
-      <h3 className="font-semibold text-2xl md:text-3xl text-[var(--color-text-primary)] mb-4 leading-tight group-hover:text-[var(--color-accent-primary)] transition-colors">
+      <h3 className="font-semibold text-2xl md:text-3xl text-[#0a3d62] mb-4 leading-tight group-hover:text-[#0a3d62] transition-colors">
         {title}
       </h3>
 
-      <p className="text-[var(--color-muted-foreground)] text-[15px] md:text-base leading-relaxed mb-10 flex-1">
+      <p className="text-[#0a3d62]/70 text-[15px] md:text-base leading-relaxed mb-10 flex-1">
         {description}
       </p>
 
@@ -34,9 +34,9 @@ export function FeaturedExpertiseCard() {
           return (
             <div
               key={tag}
-              className="flex items-center gap-2 text-xs font-medium px-4 py-2.5 bg-[var(--color-bg-secondary)] rounded-full border border-[var(--color-border)] text-[var(--color-text-primary)] hover:bg-[var(--color-accent-primary)]/5 transition-colors"
+              className="flex items-center gap-2 text-xs font-medium px-4 py-2.5 bg-slate-50 rounded-full border border-slate-100 text-[#0a3d62] hover:bg-slate-100 transition-colors"
             >
-              <TagIcon className="w-4 h-4 text-[var(--color-accent-primary)]" />
+              <TagIcon className="w-4 h-4 text-[#0a3d62]" />
               {tag}
             </div>
           )
