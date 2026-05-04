@@ -5,7 +5,6 @@ import {
   Header,
   Footer,
   ScrollReveal,
-  // DynamicBackground,
   SocialSidebar,
 } from "@/components/layout"
 
@@ -14,7 +13,7 @@ import {
   Hero,
   Services,
   SpecializedRecruitment,
-  TrustSection,
+  TrustedBySection,
   CompaniesSection,
   SmartRSection,
   CandidatesSection,
@@ -50,6 +49,10 @@ export default function LandingPage() {
         <Hero />
       </ScrollReveal>
 
+          <ScrollReveal>
+        <TrustedBySection />
+      </ScrollReveal>
+
       {/* Services Section */}
       <ScrollReveal>
         <Services />
@@ -61,9 +64,6 @@ export default function LandingPage() {
       </ScrollReveal>
 
       {/* Trust Metrics */}
-      {/* <ScrollReveal>
-        <TrustSection />
-      </ScrollReveal> */}
 
       {/* Companies Section */}
       <ScrollReveal>
